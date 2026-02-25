@@ -1,0 +1,34 @@
+{
+    "firestore": {
+        "rules": "firestore.rules"
+    },
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "croai-cc-001-prod",
+                    "appId": "1:973699067485:android:ea214692e5543ceaf467b4",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "croai-cc-001-prod",
+                    "appId": "1:973699067485:ios:fb8beb91b127279ff467b4",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "croai-cc-001-prod",
+                    "configurations": {
+                        "android": "1:973699067485:android:ea214692e5543ceaf467b4",
+                        "ios": "1:973699067485:ios:fb8beb91b127279ff467b4",
+                        "web": "1:973699067485:web:5d8c787d86f7c76ef467b4"
+                    }
+                }
+            }
+        }
+    }
+}
