@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "973699067485",
+    "project_id": "croai-cc-001-prod",
+    "storage_bucket": "croai-cc-001-prod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973699067485:android:ea214692e5543ceaf467b4",
+        "android_client_info": {
+          "package_name": "com.croai.cc_001"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973699067485-423ak4o88db2jh6n5hapufppkfah859i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXW1WvvUWGP4HQzDzeuHoZIE1Ati3UX3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973699067485-423ak4o88db2jh6n5hapufppkfah859i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "973699067485-ap13buaaord3qh5mdh0ohlecqhtecnde.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.croai.cc-001"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
