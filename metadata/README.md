@@ -70,10 +70,36 @@ Nakon transkripcije, transkript je analiziran s tri različita modela **koriste�
 
 ---
 
-## Datoteke u ovom folderu
+## 4. Usporedba kvalitete transkripata (Gemini)
+
+Na temelju analize oba snimljena `.srt` filea u [Gemini chatu](https://gemini.google.com/share/c84c13d7e6fa), napravljena je kvantitativna i kvalitativna usporedba. Vrlo je jasno da se radi o istom događaju, ali je razlika u kvaliteti transkripcije drastična.
+
+**Prvi transkript (YouTube video / Riverside)** djeluje kao rezultat puno preciznijeg prepoznavanja govora, dok **drugi transkript (StereoMix.wav)** izgleda kao sirovi izlaz modela koji se mučio s pozadinskom bukom, hvatanjem konteksta i fragmentiranim rečenicama.
+
+Ispod haube je u oba slučaja korišten isti model (**Whisper Large v3**), ali su ulazni signal i kontekst (prompt) stvorili ogromnu razliku — savršen *case study* zašto sirovi AI model nije dovoljan sam po sebi, već je *pipeline* oko njega ključan.
+
+### 4.1. Usporedba po kategorijama (0-100)
+
+| Kategorija | 1. Transkript (YouTube) | 2. Transkript (StereoMix) | Razlog razlike |
+| --- | --- | --- | --- |
+| **Koherentnost i tijek rečenica** | **90** | **40** | Prvi transkript slaže smislene cjeline. Drugi na početku hvata nepovezane riječi i pozadinski žamor. |
+| **Prepoznavanje entiteta (Imena i tehnologije)** | **95** | **60** | Prvi savršeno hvata specifična imena i tech koncepte ("git log", "vibe coding"). Drugi je siromašniji entitetima. |
+| **Pouzdanost (Odsutnost halucinacija)** | **85** | **45** | Drugi transkript povremeno "halucinira" tekst pokušavajući interpretirati šumove ili tihe razgovore iz publike. |
+| **Čitljivost za krajnjeg korisnika** | **90** | **35** | Prvi transkript je iznimno čitljiv i gledatelj bi s lakoćom pratio predavanje. Drugi bi gledatelja potpuno zbunio zbog isjeckanih fraza. |
+| **UKUPNI DOJAM (Prosjek)** | **90 / 100** | **45 / 100** | Prvi file je iznimno upotrebljiv, dok bi drugi zahtijevao kompletnu manualnu reviziju. |
+
+### 4.2. Zaključak
+
+* **Zašto je Riverside + Prompt transkript briljirao (90/100):** Kvaliteta izvornog zvuka (čist audio bez gubitaka) gdje Whisper dobiva jasan signal za analizu i **moć prompta** (zadan stil i ključni programerski pojmovi su "prime-ali" model da prestane nagađati).
+* **Zašto se Rode Connect "smeće" raspalo (45/100):** Šum i pozadinski žamor uzrokuju probleme jer Whisper pod svaku cijenu pokušava "čuti" govor i u tišinama. Tada halucinira izmišljajući fraze iz neartikuliranog šuma. Ovo je školski primjer *garbage in, garbage out* pravila u AI svijetu.
+
+---
+
+## 5. Datoteke u ovom folderu
 
 | Datoteka | Opis |
 |---|---|
+| `SOCIAL.md` | Statistike objava na društvenim mrežama |
 | `StereoMix.wav.txt` | Sirovi transkript (Rode Connect, plain text) |
 | `StereoMix.wav.srt` | Sirovi transkript (Rode Connect, SRT format) |
 | `whisper_prompt.txt` | Ručni whisper prompt za sirovu snimku |
