@@ -1,0 +1,1 @@
+CroAI,CroAI_Code_Club,Matija_Stepanić,Flutter,Firebase,Claude_Code,Firebase_Auth,Cloud_Firestore,GitHub,Firebase_Hosting,ITalk_d.o.o.,Supabase,FlutterFlow,CroAI_HQ,Zavrtnica_17,Live_Coding,Event_Ticketing_App,Zagreb
