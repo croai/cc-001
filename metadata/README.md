@@ -55,7 +55,7 @@ Nakon transkripcije, transkript je analiziran s tri različita modela **koriste�
 ### 3.1. Proces
 
 1. Meetup je sustavno snimljen s **riverside.fm**
-2. Snimka je exportana i uploadana na **YouTube**
+2. Snimka je exportana i uploadana na **YouTube**: [https://www.youtube.com/watch?v=MGLq9v3AtvE](https://www.youtube.com/watch?v=MGLq9v3AtvE)
 3. Korišten je skup skripti s [domovinatv/fetch.domovina.tv](https://github.com/domovinatv/fetch.domovina.tv/tree/main) za:
    1. **Preuzimanje videa** s YouTube kanala
    2. **Generiranje whisper prompta** s LM Studio (lokalni LLM)
